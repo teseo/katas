@@ -1,2 +1,2 @@
 # katas
-PHP katas with BDD/TDD and PHPSpec
+PHP katas with BDD/TDD Gulp and PHPSpec
