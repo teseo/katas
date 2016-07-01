@@ -6,24 +6,41 @@ var notify  = require('gulp-notify');
 
 //Tasks
 gulp.task('test-prime', function () {
-    gulp.src('spec/**/*.php')
+    gulp.src('spec/PrimeFactorsSpec.php')
         .pipe(phpspec('', {notify: true}))
         .on('error', notify.onError({
             title: 'Crap',
-            message: 'Your tests failed, Javi'
+            message: 'Your factors tests failed, Javi'
         }))
         .pipe(notify({
             title: 'Success',
-            message: 'All tests have returned green!'
+            message: 'All Factors tests have returned green!'
+        }));
+});
+gulp.task('test-roman', function () {
+    gulp.src('spec/RomanNumeralsConverterSpec.php')
+        .pipe(run('phpspec run spec/RomanNumeralsConverterSpec.php'))
+        .on('error', notify.onError({
+            title: 'Crap',
+            message: 'Your Roman tests failed, Javi'
+        }))
+        .pipe(notify({
+            title: 'Success',
+            message: 'All Roman tests have returned green!'
         }));
 });
 //Tasks
+
 gulp.task('clear', function () {
     gulp.src('').pipe(run('clear'));
 });
 
 gulp.task('watch-prime', function() {
-    gulp.watch(['spec/**/*.php', 'src/**/*.php'], ['test-prime']);
+    gulp.watch(['spec/PrimeFactorsSpec.php', 'src/PrimeFactors.php'], ['test-prime']);
+});
+gulp.task('watch-roman', function() {
+    gulp.watch(['spec/RomanNumeralsConverterSpec.php', 'src/RomanNumeralsConverter.php'], ['test-roman']);
 });
 
-gulp.task('default', ['clear','test-prime', 'watch-prime']);
+gulp.task('prime', ['clear','test-prime', 'watch-prime']);
+gulp.task('roman', ['clear','test-roman', 'watch-roman']);
