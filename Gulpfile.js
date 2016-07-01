@@ -4,7 +4,7 @@ var phpspec = require('gulp-phpspec');
 var run     = require('gulp-run');
 var notify  = require('gulp-notify');
 
-//Tasks
+// Prime numbers tasks
 gulp.task('test-prime', function () {
     gulp.src('spec/PrimeFactorsSpec.php')
         .pipe(phpspec('', {notify: true, testSuite: 'spec/PrimeFactorsSpec.php'}))
@@ -17,6 +17,11 @@ gulp.task('test-prime', function () {
             message: 'All Factors tests have returned green!'
         }));
 });
+gulp.task('watch-prime', function() {
+    gulp.watch(['spec/PrimeFactorsSpec.php', 'src/PrimeFactors.php'], ['test-prime']);
+});
+
+// Roman numbers tasks
 gulp.task('test-roman', function () {
     gulp.src('spec/RomanNumeralsConverterSpec.php')
         .pipe(phpspec('', {notify: true, testSuite: 'spec/RomanNumeralsConverterSpec.php'}))
@@ -29,18 +34,16 @@ gulp.task('test-roman', function () {
             message: 'All Roman tests have returned green!'
         }));
 });
-//Tasks
+gulp.task('watch-roman', function() {
+    gulp.watch(['spec/RomanNumeralsConverterSpec.php', 'src/RomanNumeralsConverter.php'], ['test-roman']);
 
+//Common Tasks
 gulp.task('clear', function () {
     gulp.src('').pipe(run('clear'));
 });
 
-gulp.task('watch-prime', function() {
-    gulp.watch(['spec/PrimeFactorsSpec.php', 'src/PrimeFactors.php'], ['test-prime']);
-});
-gulp.task('watch-roman', function() {
-    gulp.watch(['spec/RomanNumeralsConverterSpec.php', 'src/RomanNumeralsConverter.php'], ['test-roman']);
-});
+
+
 
 gulp.task('prime', ['clear','test-prime', 'watch-prime']);
 gulp.task('roman', ['clear','test-roman', 'watch-roman']);
