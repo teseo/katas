@@ -18,8 +18,8 @@ gulp.task('clear', function () {
     gulp.src('').pipe(plugins.run('clear'));
 });
 
-gulp.task('roman', ['clear','test-roman', 'watch-roman']);
-gulp.task('prime', ['clear','test-prime', 'watch-prime']);
-gulp.task('bowling', ['clear','test-bowling', 'watch-bowling']);
+gulp.task('roman', ['clear','suite-roman', 'watch-roman']);
+gulp.task('prime', ['clear','suite-prime', 'watch-prime']);
+gulp.task('bowling', ['clear','suite-bowling', 'watch-bowling']);
 
-gulp.task('default', ['clear','test-bowling', 'test-roman', 'test-prime']);
+gulp.task('default', ['clear','suite-bowling', 'suite-roman', 'suite-prime']);

@@ -1,5 +1,5 @@
 module.exports = function(gulp, plugins) {
-    gulp.task('test-bowling', function () {
+    gulp.task('suite-bowling', function () {
         return gulp.src('spec/BowlingGameSpec.php', {base: './'})
             .pipe(plugins.phpspec('', {notify: true, testSuite: 'spec/BowlingGameSpec.php'}))
             .on('error', plugins.notify.onError({

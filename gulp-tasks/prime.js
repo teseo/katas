@@ -1,5 +1,5 @@
 module.exports = function(gulp, plugins) {
-    gulp.task('test-prime', function () {
+    gulp.task('suite-prime', function () {
         return gulp.src('spec/PrimeFactorsSpec.php', {base: './'})
             .pipe(plugins.phpspec('', {notify: true, testSuite: 'spec/PrimeFactorsSpec.php'}))
             .on('error', plugins.notify.onError({

@@ -1,5 +1,5 @@
 module.exports = function(gulp, plugins) {
-    gulp.task('test-roman', function () {
+    gulp.task('suite-roman', function () {
         return gulp.src('spec/RomanNumeralsConverterSpec.php', {base: './'})
             .pipe(plugins.phpspec('', {notify: true, testSuite: 'spec/RomanNumeralsConverterSpec.php'}))
             .on('error', plugins.notify.onError({

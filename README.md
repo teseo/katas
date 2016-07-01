@@ -13,14 +13,14 @@ gulp
 To run the test suite for each individual kata:
 - Bowling Kata:
 ```
-gulp test-bowling
+gulp suite-bowling
 ```
 - Prime Numbers Kata:
 ```
-gulp test-prime
+gulp suite-prime
 ```
 - Roman Numbers Kata:
 ```
-gulp test-roman
+gulp suite-roman
 ```
 
