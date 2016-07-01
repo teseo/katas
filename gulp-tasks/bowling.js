@@ -6,6 +6,9 @@ module.exports = function(gulp, plugins) {
                 title: 'Crap',
                 message: 'Your bowling tests failed, Javi'
             }))
+            .on("error", function () {
+                this.emit('end')
+            })
             .pipe(plugins.notify({
                 title: 'Success',
                 message: 'All bowling tests have returned green!'

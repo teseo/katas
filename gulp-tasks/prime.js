@@ -6,6 +6,9 @@ module.exports = function(gulp, plugins) {
                 title: 'Crap',
                 message: 'Your factors tests failed, Javi'
             }))
+            .on("error", function () {
+                this.emit('end')
+            })
             .pipe(plugins.notify({
                 title: 'Success',
                 message: 'All Factors tests have returned green!'
