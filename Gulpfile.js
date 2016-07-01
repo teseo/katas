@@ -21,3 +21,5 @@ gulp.task('clear', function () {
 gulp.task('roman', ['clear','test-roman', 'watch-roman']);
 gulp.task('prime', ['clear','test-prime', 'watch-prime']);
 gulp.task('bowling', ['clear','test-bowling', 'watch-bowling']);
+
+gulp.task('default', ['clear','test-bowling', 'test-roman', 'test-prime']);
