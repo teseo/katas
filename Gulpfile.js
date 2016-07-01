@@ -7,7 +7,7 @@ var notify  = require('gulp-notify');
 //Tasks
 gulp.task('test-prime', function () {
     gulp.src('spec/PrimeFactorsSpec.php')
-        .pipe(phpspec('', {notify: true}))
+        .pipe(phpspec('', {notify: true, testSuite: 'spec/PrimeFactorsSpec.php'}))
         .on('error', notify.onError({
             title: 'Crap',
             message: 'Your factors tests failed, Javi'
@@ -19,7 +19,7 @@ gulp.task('test-prime', function () {
 });
 gulp.task('test-roman', function () {
     gulp.src('spec/RomanNumeralsConverterSpec.php')
-        .pipe(run('phpspec run spec/RomanNumeralsConverterSpec.php'))
+        .pipe(phpspec('', {notify: true, testSuite: 'spec/RomanNumeralsConverterSpec.php'}))
         .on('error', notify.onError({
             title: 'Crap',
             message: 'Your Roman tests failed, Javi'
