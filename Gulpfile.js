@@ -6,7 +6,7 @@ var notify  = require('gulp-notify');
 
 //Tasks
 gulp.task('test-prime', function () {
-    gulp.src('primeNumbers/spec/**/*.php')
+    gulp.src('spec/**/*.php')
         .pipe(phpspec('', {notify: true}))
         .on('error', notify.onError({
             title: 'Crap',
@@ -23,7 +23,7 @@ gulp.task('clear', function () {
 });
 
 gulp.task('watch-prime', function() {
-    gulp.watch(['primeNumbers/spec/**/*.php', 'primeNumbers/src/**/*.php'], ['test-prime']);
+    gulp.watch(['spec/**/*.php', 'src/**/*.php'], ['test-prime']);
 });
 
 gulp.task('default', ['clear','test-prime', 'watch-prime']);

@@ -3,6 +3,6 @@
         "phpspec/phpspec": "^2.5"
     },
     "autoload": {
-        "psr-4": {"": "primeNumbers/src/"}
+        "psr-4": {"": "src/"}
     }
 }
