@@ -4,6 +4,7 @@ PHP katas with BDD/TDD Gulp and PHPSpec including:
 - Bowling game
 - Prime numbers calculator
 - String calculator
+- FizzBuzz numbers generator
 
 #Install
 Install composer packages
@@ -36,5 +37,9 @@ gulp suite-roman
 - Sting calculator Kata:
 ```
 gulp suite-calculator
+```
+- FizzBuzz numbers generator Kata:
+```
+gulp suite-fizzbuzz
 ```
 

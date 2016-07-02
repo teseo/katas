@@ -18,6 +18,10 @@ require('./gulp-tasks/watch-bowling')(gulp);
 require('./gulp-tasks/calculator')(gulp, plugins);
 require('./gulp-tasks/watch-calculator')(gulp);
 
+//Fizzbuzz Kata
+require('./gulp-tasks/fizzbuzz')(gulp, plugins);
+require('./gulp-tasks/watch-fizzbuzz')(gulp);
+
 gulp.task('clear', function () {
     gulp.src('').pipe(plugins.run('clear'));
 });
@@ -30,3 +34,4 @@ gulp.task('roman', ['clear','suite-roman', 'watch-roman']);
 gulp.task('prime', ['clear','suite-prime', 'watch-prime']);
 gulp.task('bowling', ['clear','suite-bowling', 'watch-bowling']);
 gulp.task('calculator', ['clear','suite-calculator', 'watch-calculator']);
+gulp.task('fizzbuzz', ['clear','suite-fizzbuzz', 'watch-fizzbuzz']);
