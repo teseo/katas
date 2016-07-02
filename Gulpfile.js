@@ -14,7 +14,7 @@ require('./gulp-tasks/watch-prime')(gulp);
 require('./gulp-tasks/bowling')(gulp, plugins);
 require('./gulp-tasks/watch-bowling')(gulp);
 
-//Bowling Kata
+//String Calculator Kata
 require('./gulp-tasks/calculator')(gulp, plugins);
 require('./gulp-tasks/watch-calculator')(gulp);
 
