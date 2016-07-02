@@ -16,7 +16,7 @@ npm install
 ```
 
 #Usage
-To run all the test
+To run all the tests
 ```
 gulp
 ```
