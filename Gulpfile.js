@@ -22,9 +22,11 @@ gulp.task('clear', function () {
     gulp.src('').pipe(plugins.run('clear'));
 });
 
+gulp.task('default', function () {
+    gulp.src('').pipe(plugins.run('phpspec run -fpretty'));
+});
+
 gulp.task('roman', ['clear','suite-roman', 'watch-roman']);
 gulp.task('prime', ['clear','suite-prime', 'watch-prime']);
 gulp.task('bowling', ['clear','suite-bowling', 'watch-bowling']);
 gulp.task('calculator', ['clear','suite-calculator', 'watch-calculator']);
-
-gulp.task('default', ['clear','suite-bowling', 'suite-roman', 'suite-prime']);
