@@ -14,6 +14,10 @@ require('./gulp-tasks/watch-prime')(gulp);
 require('./gulp-tasks/bowling')(gulp, plugins);
 require('./gulp-tasks/watch-bowling')(gulp);
 
+//Bowling Kata
+require('./gulp-tasks/calculator')(gulp, plugins);
+require('./gulp-tasks/watch-calculator')(gulp);
+
 gulp.task('clear', function () {
     gulp.src('').pipe(plugins.run('clear'));
 });
@@ -21,5 +25,6 @@ gulp.task('clear', function () {
 gulp.task('roman', ['clear','suite-roman', 'watch-roman']);
 gulp.task('prime', ['clear','suite-prime', 'watch-prime']);
 gulp.task('bowling', ['clear','suite-bowling', 'watch-bowling']);
+gulp.task('calculator', ['clear','suite-calculator', 'watch-calculator']);
 
 gulp.task('default', ['clear','suite-bowling', 'suite-roman', 'suite-prime']);
