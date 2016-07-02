@@ -3,6 +3,7 @@ PHP katas with BDD/TDD Gulp and PHPSpec including:
 - Roman numbers translator
 - Bowling game
 - Prime numbers calculator
+- String calculator
 
 #Install
 Install composer packages
@@ -31,5 +32,9 @@ gulp suite-prime
 - Roman Numbers Kata:
 ```
 gulp suite-roman
+```
+- Sting calculator Kata:
+```
+gulp suite-calculator
 ```
 
