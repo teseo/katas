@@ -20,9 +20,9 @@ class BowlingGame
     const MAX_ALLOWED_FRAMES_WITH_NO_BONUS = 10;
 
     /**
-     * @param $hits
+     * @param int $hits
      */
-    public function roll($hits)
+    public function roll(int $hits)
     {
         $this->plays[] = $hits;
     }
@@ -32,7 +32,7 @@ class BowlingGame
      */
     public function getResult()
     {
-        for ($i = 0; $i < self::MAX_ALLOWED_FRAMES_WITH_NO_BONUS; $i+=2  )
+        for ($i = 0; $i < self::MAX_ALLOWED_FRAMES_WITH_NO_BONUS; $i+=2)
         {
             if ($this->isStrike($i))
             {
