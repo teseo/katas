@@ -6,7 +6,7 @@ PHP katas with BDD/TDD Gulp and PHPSpec including:
 - String calculator
 - FizzBuzz numbers generator
 
-#Install
+# Install
 Install composer packages
 ```
 composer install
@@ -16,7 +16,7 @@ Install npm packages
 npm install
 ```
 
-#Usage
+# Usage
 To run all the tests
 ```
 gulp
